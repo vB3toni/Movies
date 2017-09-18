@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{35732485-9965-4B03-BB76-98B727B95ADD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{D6AD1844-08B2-4CF6-B837-418CC440008A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arctouch.Movies.Core.Domain", "Core\Domain\Arctouch.Movies.Core.Domain.csproj", "{44360CFB-575F-422B-B263-3313D00544CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{4A434F51-A692-4B1D-86DB-C67A74B94951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arctouch.Movies.Core.Data", "Core\Data\Arctouch.Movies.Core.Data.csproj", "{D9EBCBEA-642A-49F8-8340-86F6BFE950AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{699E92A6-8DAA-4E79-AAF1-FA8A803F9AB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arctouch.Movies.Core.CrossCutting", "Core\CrossCutting\Arctouch.Movies.Core.CrossCutting.csproj", "{89D3EC7D-BB19-494D-A5B0-88D9FCC1285F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{1388AA3E-B707-4461-8A8E-E05C21A36777}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{B761E16F-7190-4EB1-AA92-F6AAAB292013}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{6D905F2F-296C-4F7B-8287-F1F1CDA87D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arctouch.Movies.Core.Application", "Core\Application\Arctouch.Movies.Core.Application.csproj", "{A67EF59F-D79A-4DAC-9FE3-2AAF268B34D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44360CFB-575F-422B-B263-3313D00544CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44360CFB-575F-422B-B263-3313D00544CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44360CFB-575F-422B-B263-3313D00544CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44360CFB-575F-422B-B263-3313D00544CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9EBCBEA-642A-49F8-8340-86F6BFE950AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9EBCBEA-642A-49F8-8340-86F6BFE950AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9EBCBEA-642A-49F8-8340-86F6BFE950AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9EBCBEA-642A-49F8-8340-86F6BFE950AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89D3EC7D-BB19-494D-A5B0-88D9FCC1285F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89D3EC7D-BB19-494D-A5B0-88D9FCC1285F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89D3EC7D-BB19-494D-A5B0-88D9FCC1285F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89D3EC7D-BB19-494D-A5B0-88D9FCC1285F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A67EF59F-D79A-4DAC-9FE3-2AAF268B34D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A67EF59F-D79A-4DAC-9FE3-2AAF268B34D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A67EF59F-D79A-4DAC-9FE3-2AAF268B34D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A67EF59F-D79A-4DAC-9FE3-2AAF268B34D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6AD1844-08B2-4CF6-B837-418CC440008A} = {35732485-9965-4B03-BB76-98B727B95ADD}
+		{44360CFB-575F-422B-B263-3313D00544CA} = {D6AD1844-08B2-4CF6-B837-418CC440008A}
+		{4A434F51-A692-4B1D-86DB-C67A74B94951} = {35732485-9965-4B03-BB76-98B727B95ADD}
+		{D9EBCBEA-642A-49F8-8340-86F6BFE950AA} = {4A434F51-A692-4B1D-86DB-C67A74B94951}
+		{699E92A6-8DAA-4E79-AAF1-FA8A803F9AB5} = {35732485-9965-4B03-BB76-98B727B95ADD}
+		{89D3EC7D-BB19-494D-A5B0-88D9FCC1285F} = {699E92A6-8DAA-4E79-AAF1-FA8A803F9AB5}
+		{1388AA3E-B707-4461-8A8E-E05C21A36777} = {35732485-9965-4B03-BB76-98B727B95ADD}
+		{6D905F2F-296C-4F7B-8287-F1F1CDA87D62} = {35732485-9965-4B03-BB76-98B727B95ADD}
+		{A67EF59F-D79A-4DAC-9FE3-2AAF268B34D9} = {1388AA3E-B707-4461-8A8E-E05C21A36777}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {251E8395-ED66-499E-8D8F-F0C73C726FC8}
+	EndGlobalSection
+EndGlobal
