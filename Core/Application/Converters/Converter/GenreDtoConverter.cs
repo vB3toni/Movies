@@ -11,7 +11,7 @@ namespace Arctouch.Movies.Core.Application.Converters.Converter
             return AutoMapper.Mapper.Map<GenreDto, Genre>(mapping);
         }
 
-        public static GenreDto ToMapping(this Genre entity)
+        public static GenreDto ToDto(this Genre entity)
         {
             return AutoMapper.Mapper.Map<Genre, GenreDto>(entity);
         }
@@ -21,7 +21,7 @@ namespace Arctouch.Movies.Core.Application.Converters.Converter
             return AutoMapper.Mapper.Map<IEnumerable<GenreDto>, IEnumerable<Genre>>(mappings);
         }
 
-        public static IEnumerable<GenreDto> ToMappings(this IEnumerable<Genre> entity)
+        public static IEnumerable<GenreDto> ToDtos(this IEnumerable<Genre> entity)
         {
             return AutoMapper.Mapper.Map<IEnumerable<Genre>, IEnumerable<GenreDto>>(entity);
         }

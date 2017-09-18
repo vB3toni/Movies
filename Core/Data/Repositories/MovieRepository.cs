@@ -13,11 +13,11 @@ namespace Arctouch.Movies.Core.Data.Repositories
 {
     public class MovieRepository : RepositoryBase, IMovieRepository
     {
-        public async Task<IEnumerable<Movie>> GetAllMoviesPaginated(int page)
+        public async Task<IEnumerable<Movie>> GetAllMoviesPaginated(int page, string search)
         {
             using (var httpClient = new HttpClient())
             {
-                var serveradress = GetMoviesApiUrl(page);
+                var serveradress = string.IsNullOrWhiteSpace(search) ? GetMoviesApiUrl(page) : GetMoviesSearchApiUrl(page, search);
 
                 httpClient.BaseAddress = new Uri(serveradress);
 
