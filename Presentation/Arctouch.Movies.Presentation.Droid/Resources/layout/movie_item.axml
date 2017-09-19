@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/item_background">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <MvxImageView
+                android:layout_width="@dimen/image_view_width"
+                android:layout_height="@dimen/image_view_height"
+                android:id="@+id/movie_item_ivphotos"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                local:MvxBind="ImageUrl BackDropWithFullUrl"
+                android:layout_gravity="center"
+                android:minWidth="@dimen/image_view_min_width"
+                android:minHeight="@dimen/image_view_min_height" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                local:MvxBind="Text Title;"
+                tools:text="Movie 1"
+                android:layout_marginLeft="@dimen/margin_default_small"
+                android:layout_weight="1"
+                android:textColor="@color/text_color_primary" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                local:MvxBind="Text GenresNamesFormatted;"
+                tools:text="Genre 1 / Genre 2 / Genre 3"
+                android:layout_marginLeft="@dimen/margin_default_small"
+                android:layout_weight="1"
+                android:textColor="@color/text_color_primary" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                local:MvxBind="Text ReleaseDate;"
+                tools:text="12/22/2014"
+                android:layout_marginLeft="@dimen/margin_default_small"
+                android:layout_weight="1"
+                android:textColor="@color/text_color_primary" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        style="@style/DefaultLine"
+        android:layout_marginTop="@dimen/margin_line_extra_small"
+        android:layout_marginBottom="@dimen/margin_line_extra_small" />
+</LinearLayout>

@@ -8,7 +8,7 @@ namespace Arctouch.Movies.Core.Domain.Entities
     {
         public int Id { get; set; }
 
-        public IEnumerable<int> GenresIds { get; set; }
+        public IEnumerable<Genre> Genres { get; set; }
 
         public string Title { get; set; }
 
@@ -16,7 +16,7 @@ namespace Arctouch.Movies.Core.Domain.Entities
 
         public string Overview { get; set; }
 
-        public DateTime ReleaseDate { get; set; }
+        public string ReleaseDate { get; set; }
         
         public bool IsEntityValid => Id > 0 && !string.IsNullOrWhiteSpace(Title);
     }
