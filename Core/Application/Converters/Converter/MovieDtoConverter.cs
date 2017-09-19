@@ -11,7 +11,7 @@ namespace Arctouch.Movies.Core.Application.Converters.Converter
             return AutoMapper.Mapper.Map<MovieDto, Movie>(mapping);
         }
 
-        public static MovieDto ToDto(this Movie entity)
+        public static MovieDto ToMapping(this Movie entity)
         {
             return AutoMapper.Mapper.Map<Movie, MovieDto>(entity);
         }
@@ -21,7 +21,7 @@ namespace Arctouch.Movies.Core.Application.Converters.Converter
             return AutoMapper.Mapper.Map<IEnumerable<MovieDto>, IEnumerable<Movie>>(mappings);
         }
 
-        public static IEnumerable<MovieDto> ToDtos(this IEnumerable<Movie> entity)
+        public static IEnumerable<MovieDto> ToMappings(this IEnumerable<Movie> entity)
         {
             return AutoMapper.Mapper.Map<IEnumerable<Movie>, IEnumerable<MovieDto>>(entity);
         }

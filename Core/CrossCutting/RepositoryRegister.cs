@@ -8,8 +8,8 @@ namespace Arctouch.Movies.Core.CrossCutting
     {
         public static void Register(Container container)
         {
-            container.Register<IGenreRepository, GenreRepository>(Lifestyle.Singleton);
             container.Register<IMovieRepository, MovieRepository>(Lifestyle.Singleton);
+            container.Register<IGenreRepository, GenreRepository>(Lifestyle.Singleton);
         }
     }
 }
