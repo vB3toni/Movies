@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Arctouch.Movies.Core.Application.Converters.Converter;
 using Arctouch.Movies.Core.Application.Dtos;
 using Arctouch.Movies.Core.Domain.Interfaces.Application;
@@ -50,7 +51,7 @@ namespace Arctouch.Movies.Core.Application.ViewModels
 
                 _moviesDictionary.TryGetValue(_currentPage, out var movieEnumerable);
 
-                return movieEnumerable;
+                return string.IsNullOrWhiteSpace(_search) ? movieEnumerable : movieEnumerable?.Where(x => x.Title.ToUpper().Contains(_search.ToUpper()));
             }
         }
 

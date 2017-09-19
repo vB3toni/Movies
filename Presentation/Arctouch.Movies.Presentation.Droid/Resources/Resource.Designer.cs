@@ -4308,9 +4308,6 @@ namespace Arctouch.Movies.Presentation.Droid
 			// aapt resource value: 0x7f090045
 			public const int action_mode_close_button = 2131296325;
 			
-			// aapt resource value: 0x7f0900a4
-			public const int action_search = 2131296420;
-			
 			// aapt resource value: 0x7f09008c
 			public const int action_text = 2131296396;
 			
@@ -4508,6 +4505,9 @@ namespace Arctouch.Movies.Presentation.Droid
 			
 			// aapt resource value: 0x7f090090
 			public const int media_actions = 2131296400;
+			
+			// aapt resource value: 0x7f0900a4
+			public const int menu_search = 2131296420;
 			
 			// aapt resource value: 0x7f090024
 			public const int middle = 2131296292;
@@ -5027,7 +5027,10 @@ namespace Arctouch.Movies.Presentation.Droid
 			public const int ic_arrow_forward = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int ic_splash = 2130903042;
+			public const int ic_search = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int ic_splash = 2130903043;
 			
 			static Mipmap()
 			{

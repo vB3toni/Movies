@@ -58,6 +58,7 @@
     <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Java.Interop" />
     <Reference Include="Mono.Android.Export" />
     <Reference Include="MvvmCross.Binding, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MvvmCross.Binding.5.2.0\lib\MonoAndroid\MvvmCross.Binding.dll</HintPath>
