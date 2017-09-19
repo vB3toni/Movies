@@ -4308,6 +4308,9 @@ namespace Arctouch.Movies.Presentation.Droid
 			// aapt resource value: 0x7f090045
 			public const int action_mode_close_button = 2131296325;
 			
+			// aapt resource value: 0x7f0900a4
+			public const int action_search = 2131296420;
+			
 			// aapt resource value: 0x7f09008c
 			public const int action_text = 2131296396;
 			
@@ -4994,6 +4997,22 @@ namespace Arctouch.Movies.Presentation.Droid
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0f0000
+			public const int menu_search = 2131689472;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}

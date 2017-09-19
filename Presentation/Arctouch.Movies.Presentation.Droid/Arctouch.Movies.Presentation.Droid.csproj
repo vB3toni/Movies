@@ -254,6 +254,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_splash.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\menu_search.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_search.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

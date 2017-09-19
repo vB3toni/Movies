@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.OS;
+using Android.Runtime;
 using Android.Widget;
 using Arctouch.Movies.Core.Application.ViewModels;
 using MvvmCross.Droid.Support.V7.AppCompat;
@@ -19,11 +20,24 @@ namespace Arctouch.Movies.Presentation.Droid.Activities
             SetContentView(Resource.Layout.main);
 
             _tbMenu = FindViewById<Toolbar>(Resource.Id.main_tbmenu);
+            var search = _tbMenu.Menu.FindItem(Resource.Id.menu_search);
+            var searchView = search.ActionView.JavaCast<Android.Support.V7.Widget.SearchView>();
+            searchView.QueryHint = "Search movies...";
+            searchView.QueryTextChange += (s, e) => ViewModel.Search = e.NewText;
+
+            searchView.QueryTextSubmit += (s, e) =>
+            {
+                ViewModel.Search = e.Query;
+                e.Handled = true;
+            };
 
             SetSupportActionBar(_tbMenu);
 
             Toast.MakeText(this, "Loading movies, wait a second...", ToastLength.Long).Show();
+            
         }
+
+
     }
 }
 
