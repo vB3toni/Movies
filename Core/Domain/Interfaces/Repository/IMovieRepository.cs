@@ -7,5 +7,7 @@ namespace Arctouch.Movies.Core.Domain.Interfaces.Repository
     public interface IMovieRepository
     {
         Task<IEnumerable<Movie>> GetAllMoviesPaginated(int page, string search);
+
+        Task<Movie> GetMovieById(int movieId);
     }
 }

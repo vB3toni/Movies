@@ -16,5 +16,10 @@
 
         public virtual string GetGenreApiUrl =>
             $"https://api.themoviedb.org/3/genre/movie/list?api_key={ApiKey}&language=en-US";
+
+        public virtual string GetMovieByIdApiUrl(int id)
+        {
+            return $"https://api.themoviedb.org/3/movie/{id}?api_key={ApiKey}&language=en-US";
+        }
     }
 }

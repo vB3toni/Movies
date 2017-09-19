@@ -18,6 +18,10 @@ namespace Arctouch.Movies.Core.Application.ViewModels
         private int _currentPage;
         private string _search;
 
+        private MvxCommand _pageBackCommand;
+        private MvxCommand _pageForwardCommand;
+        private MvxCommand<MovieDto> _openMoviesDetailsCommand;
+
         #endregion
 
         public MainViewModel()
@@ -25,6 +29,8 @@ namespace Arctouch.Movies.Core.Application.ViewModels
             _movieApplication = Mvx.Resolve<Container>().GetInstance<IMovieApplication>();
 
             _moviesDictionary = new Dictionary<int, IEnumerable<MovieDto>>();
+
+            _currentPage = 1;
         }
 
         public IEnumerable<MovieDto> MoviesList
@@ -36,6 +42,8 @@ namespace Arctouch.Movies.Core.Application.ViewModels
                     var taskmovies = _movieApplication.GetAllMovies(_currentPage, _search).ContinueWith(task =>
                     {
                         _moviesDictionary.Add(_currentPage, task.Result.ToDtos());
+
+                        RaisePropertyChanged(() => MoviesList);
                     });
                     taskmovies.ConfigureAwait(false);
                 }
@@ -55,6 +63,8 @@ namespace Arctouch.Movies.Core.Application.ViewModels
                 
                 RaisePropertyChanged(() => CurrentPage);
                 RaisePropertyChanged(() => MoviesList);
+                RaisePropertyChanged(() => EnablePageBack);
+                RaisePropertyChanged(() => EnablePageForward);
             }
         }
 
@@ -69,5 +79,35 @@ namespace Arctouch.Movies.Core.Application.ViewModels
                 RaisePropertyChanged(() => MoviesList);
             }
         }
+
+        public bool EnablePageBack => _currentPage > 1;
+
+        public bool EnablePageForward => _currentPage < 500;
+
+        public MvxCommand PageBack => _pageBackCommand = _pageBackCommand ?? new MvxCommand(() =>
+        {
+            if (_currentPage > 1)
+            {
+                CurrentPage -= 1;
+            }
+        });
+
+        public MvxCommand PageForward => _pageForwardCommand = _pageForwardCommand ?? new MvxCommand(() =>
+        {
+            if (_currentPage < 500)
+            {
+                CurrentPage += 1;
+            }
+        });
+
+        public MvxCommand<MovieDto> OpenMovieDetails => _openMoviesDetailsCommand =
+            _openMoviesDetailsCommand ?? new MvxCommand<MovieDto>(
+                movie =>
+                {
+                    var bundle = new MvxBundle();
+                    bundle.Data.Add("idmovie", movie.Id.ToString());
+
+                    ShowViewModel<MovieDetailsViewModel>(bundle);
+                });
     }
 }

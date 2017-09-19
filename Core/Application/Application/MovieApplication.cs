@@ -19,5 +19,10 @@ namespace Arctouch.Movies.Core.Application.Application
         {
             return _movieRepository.GetAllMoviesPaginated(page, search);
         }
+
+        public Task<Movie> GetMovieById(int movieId)
+        {
+            return _movieRepository.GetMovieById(movieId);
+        }
     }
 }
